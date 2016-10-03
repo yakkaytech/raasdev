@@ -1,5 +1,10 @@
 Manifest-Version: 1.0
+<<<<<<< HEAD
+Built-By: Diya
+Build-Jdk: 1.8.0_102
+=======
 Build-Jdk: 1.7.0_79
 Built-By: USER
+>>>>>>> raasmain
 Created-By: Maven Integration for Eclipse
 

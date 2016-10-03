@@ -27,10 +27,13 @@ import com.wrapper.wrapper;
 public class user_daoImpl implements user_dao {
 	private Connection conn;
 
+<<<<<<< HEAD
+=======
 	
 	
 	
 	
+>>>>>>> raasmain
 	public void registration(registration_vo reg) throws Exception {
 		// TODO Auto-generated method stub
 
@@ -56,6 +59,9 @@ public class user_daoImpl implements user_dao {
 
 		stmt.execute(str);
 		stmt.execute(map);
+<<<<<<< HEAD
+	}
+=======
 		
 		
 		
@@ -68,6 +74,7 @@ public class user_daoImpl implements user_dao {
 	
 	
 	
+>>>>>>> raasmain
 
 	public void skills(user_vo org, String username) throws Exception {
 
@@ -78,11 +85,14 @@ public class user_daoImpl implements user_dao {
 		Date date = new Date();
 		sysdate = dateFormat.format(date);
 		int skill_id = 0;
+<<<<<<< HEAD
+=======
 
 		
 		
 		
 		
+>>>>>>> raasmain
 		// get user_id from user table
 		int user_id = 0;
 		ResultSet rs = stmt.executeQuery("select user_id from user where username='" + username + "'");
@@ -90,6 +100,11 @@ public class user_daoImpl implements user_dao {
 			user_id = rs.getInt("user_id");
 		}
 
+<<<<<<< HEAD
+		String Update_team = "update team set user_id= '" + user_id + "' where email = '" + username + "'";
+		stmt.execute(Update_team);
+
+=======
 		String Update_team = "update team set user_id= '" + user_id+"' where email = '" + username + "'";
         stmt.execute(Update_team);
 		
@@ -97,6 +112,7 @@ public class user_daoImpl implements user_dao {
 		
 		
 		
+>>>>>>> raasmain
 		// user_additional_info
 		int user_id1 = 0;
 		ResultSet rs1 = stmt.executeQuery("select user_id from user_additional_info where user_id='" + user_id + "'");
@@ -114,6 +130,8 @@ public class user_daoImpl implements user_dao {
 					+ "' where user_id = '" + user_id1 + "'";
 			stmt.execute(UserSummary);
 		}
+<<<<<<< HEAD
+=======
 
 		
 		
@@ -122,6 +140,7 @@ public class user_daoImpl implements user_dao {
 		
 		
 		
+>>>>>>> raasmain
 		// user role
 		List<Integer> userrole = new ArrayList<Integer>();
 		Set<Integer> checkbox = new HashSet<Integer>();
@@ -155,6 +174,8 @@ public class user_daoImpl implements user_dao {
 				stmt.execute(UserRole1);
 			}
 		}
+<<<<<<< HEAD
+=======
 		
 		
 		
@@ -163,6 +184,7 @@ public class user_daoImpl implements user_dao {
 		
 		
 
+>>>>>>> raasmain
 		// store country id and zone id to address table
 
 		int user_id2 = 0;
@@ -181,6 +203,8 @@ public class user_daoImpl implements user_dao {
 					+ org.getSelect2_StateZone() + "' where user_id = '" + user_id2 + "'";
 			stmt.execute(Useraddress);
 		}
+<<<<<<< HEAD
+=======
 		
 		
 		
@@ -189,6 +213,7 @@ public class user_daoImpl implements user_dao {
 		
 		
 
+>>>>>>> raasmain
 		// skills
 		String TopSkillString = org.getTopskill();
 		String[] namesList = TopSkillString.split(",");
@@ -204,6 +229,11 @@ public class user_daoImpl implements user_dao {
 					+ "','" + skill + "','" + user_id + "')";
 			stmt.execute(UserSkillSplit);
 		}
+<<<<<<< HEAD
+		
+	}
+
+=======
 		System.out.println("Data Inserted successfully");
 	}
 
@@ -225,4 +255,5 @@ public class user_daoImpl implements user_dao {
 	
 
 	
+>>>>>>> raasmain
 }

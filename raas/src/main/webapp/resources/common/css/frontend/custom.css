@@ -9,10 +9,19 @@ body {
     color: #757b87;
 }
 .icon-section{
+<<<<<<< HEAD
+    /*background-color: #09bd8f; */
+    background-color: #0580e5; 
+    line-height: 7px;
+    padding-top: 10px;
+    
+    /*margin-bottom: 10px;*/
+=======
     background-color: #09bd8f;
     line-height: 7px;
     padding-top: 10px;
     margin-bottom: 10px;
+>>>>>>> raasmain
 
 }
 a:link,
@@ -183,11 +192,30 @@ p label {
     font-size: 14px;
     text-transform: uppercase;
     font-weight: 400;
+<<<<<<< HEAD
+    color: #fff;
+}
+
+.navbar-default .navbar-nav > li>a {
+   color: #fff;  
+}
+
+.navbar-default .navbar-nav > li>a:hover {
+   /* color: #01bc8c; */
+    background-color: #fff !important;
+    color: #0580e5;
+
+}
+
+
+
+=======
 }
 
 .navbar-default .navbar-nav > li>a:hover {
     color: #01bc8c;
 }
+>>>>>>> raasmain
 /* ---------- Navbar  Dropdown menu Css ---------- */
 
 .navbar-nav .dropdown-menu:before {
@@ -214,7 +242,11 @@ p label {
 .navbar-default .navbar-nav >.open >a:hover,
 .navbar-default .navbar-nav >.open >a {
     background-color: #fff !important;
+<<<<<<< HEAD
+    color: #0580e5;
+=======
     color: #01bc8c;
+>>>>>>> raasmain
 }
 
 .navbar-nav .dropdown-menu li:hover {
@@ -224,9 +256,54 @@ p label {
 .navbar {
     margin-bottom: 0px;
     background-color: transparent;
+<<<<<<< HEAD
+    border:none;
+}
+/* ---------- Nav bar Css End ---------- */
+
+/* project css */
+
+.projectbar {
+    margin-top:0px;
+    margin-bottom: 0px;
+    background-color: #f7f9fa;
+    border-bottom: 1px solid #c0c0c0;
+    height: 100px;
+}
+
+
+.bdr_left {
+     border-left: 1px solid #e8e8e8;
+}
+
+.bdr_right {
+     border-right: 1px solid #e8e8e8;
+}
+
+.projectbar .header {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    padding: 15px;
+    margin-left:20px;
+    height:60px;
+    background-color:none;
+    border-bottom : 1px solid #e8e8e8;
+}
+
+#addon_section {
+    width: 100%;
+    margin-top: 15px;
+    padding: 5px;
+    border:none;
+    }
+
+/* ---------- project bar Css End ---------- */
+
+=======
     border: none;
 }
 /* ---------- Nav bar Css End ---------- */
+>>>>>>> raasmain
 /* ---------- Breadcrumb Css ---------- */
 
 .breadcrumb a,
@@ -415,7 +492,15 @@ blockquote {
 
 .feature-main {
     padding: 50px 0px;
+<<<<<<< HEAD
+    background-color: #d0d8d6;
+}
+
+.feature-main2 {
+    padding: 50px 0px;
+=======
     background-color: #f2eded;
+>>>>>>> raasmain
 }
 
 .feature-main1 {
@@ -596,6 +681,19 @@ footer .btn-primary.text-white {
         width: 50%;
     }
 }
+<<<<<<< HEAD
+
+/* ---------- main slid Css - raj ---------- */
+
+
+#main-slide .item img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+=======
+>>>>>>> raasmain
 /* ---------- About Us Slider Css ---------- */
 
 #owl-demo .item img {
@@ -667,7 +765,17 @@ footer .btn-primary.text-white {
 /* ---------- Copy Right Section Css  ---------- */
 
 .copyright {
+<<<<<<< HEAD
+    /*background-color: #1a1a1a;
+margin: 0.5% 0;
+    */
+    background-color:#5eaff7;
+     color: #fff;
+    padding: 0.5% 0;
+    
+=======
     background-color: #1a1a1a;
+>>>>>>> raasmain
 }
 
 .copyright p {

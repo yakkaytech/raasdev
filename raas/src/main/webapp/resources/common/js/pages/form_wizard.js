@@ -55,14 +55,20 @@ $(function () {
             return form.valid();
         },
         onFinished: function (event, currentIndex) {
+<<<<<<< HEAD
+=======
             
             
+>>>>>>> raasmain
           var form = $(this).serializeArray();
            
             // Submit form input
           var SkillValue = JSON.stringify(form);
+<<<<<<< HEAD
+=======
           alert(SkillValue);
           
+>>>>>>> raasmain
             $.ajax({
 				url :"projectregis",
 				contentType : "application/json",				
@@ -71,6 +77,14 @@ $(function () {
 				dataType : 'json',
 				async : false,
 				success : function(data) {
+<<<<<<< HEAD
+					
+					window.location.href = "/raas/projectlist";
+				},
+				
+			});
+           
+=======
 					alert("success");
 				},
 				error : function(jqXHR, textStatus, errorThrown) {
@@ -78,6 +92,7 @@ $(function () {
 				}
 			});
             form.submit();
+>>>>>>> raasmain
         }
     }).validate({
         errorPlacement: function (error, element) {
