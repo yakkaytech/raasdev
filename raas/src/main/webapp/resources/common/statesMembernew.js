@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+=======
+/**
+ * 
+ */
+
+>>>>>>> raasmain
 
 $(document).ready(function() {
 		

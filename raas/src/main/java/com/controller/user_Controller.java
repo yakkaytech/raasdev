@@ -20,12 +20,21 @@ public class user_Controller {
 
 	@Autowired
 	private user_dao radao;
+<<<<<<< HEAD
 
 	@Autowired
 	private common_dao comdao;
 
 	// @Autowired
 	// private crtproject_dao crtpro;
+=======
+	
+	@Autowired
+	private common_dao comdao;
+	
+	//@Autowired
+	//private crtproject_dao crtpro;
+>>>>>>> raasmain
 
 	// registration page
 
@@ -33,7 +42,11 @@ public class user_Controller {
 	public String welcomePage(Model model) {
 		model.addAttribute("title", "Welcome");
 		model.addAttribute("message", "This is welcome page!");
+<<<<<<< HEAD
 		return "/admin/Registerpage";
+=======
+		return "Registerpage";
+>>>>>>> raasmain
 	}
 
 	// login page
@@ -41,23 +54,40 @@ public class user_Controller {
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
 	public String loginPage(Model model) {
 
+<<<<<<< HEAD
 		return "/admin/userlogin";
 
 	}
 
+=======
+		return "userlogin";
+		
+	}
+		
+>>>>>>> raasmain
 	// forgot password page
 
 	@RequestMapping(value = "/forgot", method = RequestMethod.GET)
 	public String newmeber(Model model) {
 
+<<<<<<< HEAD
 		return "/admin/forgotpwd";
+=======
+		return "forgotpwd";
+>>>>>>> raasmain
 	}
 
 	// registration successfull redirect to login page
 	@RequestMapping(value = "/register", method = { RequestMethod.GET, RequestMethod.POST })
 	public String registration(registration_vo reg, Model model) throws Exception {
+<<<<<<< HEAD
 		radao.registration(reg);
 		return "/admin/userlogin";
+=======
+		System.out.println(reg.getFirst_name() + "====");
+		radao.registration(reg);
+		return "userlogin";
+>>>>>>> raasmain
 	}
 
 	// logout page
@@ -65,11 +95,16 @@ public class user_Controller {
 	public String logoutSuccessfulPage(Model model) {
 		model.addAttribute("title", "Logout");
 		model.addAttribute("message", "Logout SuccessFully");
+<<<<<<< HEAD
 		return "/admin/userlogin";
+=======
+		return "userlogin";
+>>>>>>> raasmain
 	}
 
 	// After successfull login redirect to home page(membernew.jsp)
 
+<<<<<<< HEAD
 	// @RequestMapping(value = "/userInfo", method = RequestMethod.GET)
 	// public String userInfo(Model model, Principal principal) throws Exception
 	// {
@@ -80,6 +115,17 @@ public class user_Controller {
 	// model.addAttribute("view3", comdao.zonedata());
 	// return "membernew";
 	// }
+=======
+	@RequestMapping(value = "/userInfo", method = RequestMethod.GET)
+	public String userInfo(Model model, Principal principal) throws Exception {
+
+		model.addAttribute("view", comdao.tabledata());
+		model.addAttribute("view1", comdao.dropdowndata());
+		model.addAttribute("view2", comdao.timezonedata());
+		model.addAttribute("view3", comdao.zonedata());
+		return "membernew";
+	}
+>>>>>>> raasmain
 
 	// redirect to access denied page
 
@@ -92,7 +138,11 @@ public class user_Controller {
 		} else {
 			model.addAttribute("msg", "You do not have permission to access this page!");
 		}
+<<<<<<< HEAD
 		return "/common/403Page";
+=======
+		return "403Page";
+>>>>>>> raasmain
 	}
 
 	// submitting the form data to database from home page(membernew.jsp)
@@ -105,6 +155,7 @@ public class user_Controller {
 
 		radao.skills(ra, userName);
 
+<<<<<<< HEAD
 		return "/member/membernew";
 	}
 
@@ -118,4 +169,20 @@ public class user_Controller {
 	// return comdao.dropdownstate(ra);
 	//
 	// }
+=======
+		return "membernew";
+	}
+	
+	
+
+	// dynamically select the state by selecting the country
+
+	@RequestMapping(value = "/dropcountry", method = { RequestMethod.GET, RequestMethod.POST })
+	@ResponseBody
+	public String dropcountry(user_vo ra, Model model) throws Exception {
+
+		return comdao.dropdownstate(ra);
+
+	}
+>>>>>>> raasmain
 }

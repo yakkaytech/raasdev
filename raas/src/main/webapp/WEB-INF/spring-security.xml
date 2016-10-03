@@ -21,12 +21,19 @@
         <intercept-url pattern="/crt/projectInfo"
 			access="hasAnyRole('ROLE_EMPLOYEE', 'ROLE_EMPLOYER')" />
 
+<<<<<<< HEAD
 		<intercept-url pattern="/userInfo"
 			access="hasAnyRole('ROLE_EMPLOYEE', 'ROLE_EMPLOYER')" />
 			<intercept-url pattern="/crt/tasks"
 			access="hasAnyRole('ROLE_EMPLOYEE', 'ROLE_EMPLOYER')" />
 			<intercept-url pattern="/crt/projectdetail"
 			access="hasAnyRole('ROLE_EMPLOYEE', 'ROLE_EMPLOYER')" />
+=======
+
+		<intercept-url pattern="/userInfo"
+			access="hasAnyRole('ROLE_EMPLOYEE', 'ROLE_EMPLOYER')" />
+			
+>>>>>>> raasmain
 					
 
 		<intercept-url pattern="/other/**" access="isAuthenticated()" />
@@ -34,7 +41,11 @@
 		<access-denied-handler error-page="/403" />
 
 		<form-login login-page='/login' login-processing-url="/j_spring_security_check"
+<<<<<<< HEAD
 			default-target-url="/projectlist"  always-use-default-target="false"
+=======
+			default-target-url="/crt/projectInfo"  always-use-default-target="false"
+>>>>>>> raasmain
 			authentication-failure-url="/login?error=true" username-parameter="username"
 			password-parameter="password" />
 

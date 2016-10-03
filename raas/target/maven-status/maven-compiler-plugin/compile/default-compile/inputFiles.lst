@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 C:\Users\Diya\Documents\workspace-sts-3.7.3.RELEASE\raas\src\main\java\com\daoImpl\crtproject_daoImpl.java
 C:\Users\Diya\Documents\workspace-sts-3.7.3.RELEASE\raas\src\main\java\com\utility\connectionDB.java
 C:\Users\Diya\Documents\workspace-sts-3.7.3.RELEASE\raas\src\main\java\com\vo\registration_vo.java
@@ -19,3 +20,12 @@ C:\Users\Diya\Documents\workspace-sts-3.7.3.RELEASE\raas\src\main\java\com\vo\me
 C:\Users\Diya\Documents\workspace-sts-3.7.3.RELEASE\raas\src\main\java\com\wrapper\wrapper.java
 C:\Users\Diya\Documents\workspace-sts-3.7.3.RELEASE\raas\src\main\java\com\daoImpl\user_daoImpl.java
 C:\Users\Diya\Documents\workspace-sts-3.7.3.RELEASE\raas\src\main\java\com\dao\projectTasks_dao.java
+=======
+C:\Users\USER\Documents\workspace-sts-3.7.3.RELEASE\raas\src\main\java\com\user\controller\user_Controller.java
+C:\Users\USER\Documents\workspace-sts-3.7.3.RELEASE\raas\src\main\java\com\user\dao\user_dao.java
+C:\Users\USER\Documents\workspace-sts-3.7.3.RELEASE\raas\src\main\java\com\user\vo\registration_vo.java
+C:\Users\USER\Documents\workspace-sts-3.7.3.RELEASE\raas\src\main\java\com\user\wrapper\wrapper.java
+C:\Users\USER\Documents\workspace-sts-3.7.3.RELEASE\raas\src\main\java\com\user\daoImpl\user_daoImpl.java
+C:\Users\USER\Documents\workspace-sts-3.7.3.RELEASE\raas\src\main\java\com\user\utility\connectionDB.java
+C:\Users\USER\Documents\workspace-sts-3.7.3.RELEASE\raas\src\main\java\com\user\vo\user_vo.java
+>>>>>>> raasmain

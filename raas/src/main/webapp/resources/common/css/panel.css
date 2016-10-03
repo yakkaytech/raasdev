@@ -203,11 +203,14 @@
     border-color: rgba(0, 0, 0, 0.1) !important;
 }
 
+<<<<<<< HEAD
 .border-strong {
     border-color: #EF6F6C !important;
     border: 5px;
 }
 
+=======
+>>>>>>> raasmain
 /* tables custome code*/
 .label-success {
     background-color: #01BC8C;

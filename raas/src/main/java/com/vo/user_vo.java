@@ -36,6 +36,7 @@ public class user_vo {
 	private List<Integer> checkboxes;
 	private String dropstate;
 
+<<<<<<< HEAD
 	public String getDropstate() {
 		return dropstate;
 	}
@@ -47,6 +48,31 @@ public class user_vo {
 	public user_vo(String breif_education, String description, String topskill, String select2_Country,
 			String select2_StateZone, String select2_TimeZone, String idRate, String select2_Hour,
 			List<Integer> checkboxes) {
+=======
+
+
+
+	public String getDropstate() {
+		return dropstate;
+	}
+	public void setDropstate(String dropstate) {
+		this.dropstate = dropstate;
+	}	
+		
+	
+
+  
+	
+
+	
+
+	
+
+	
+
+	public user_vo(String breif_education, String description, String topskill, String select2_Country,
+			String select2_StateZone, String select2_TimeZone, String idRate, String select2_Hour, List<Integer> checkboxes) {
+>>>>>>> raasmain
 		super();
 		Breif_education = breif_education;
 		this.description = description;
@@ -61,8 +87,13 @@ public class user_vo {
 
 	@Override
 	public String toString() {
+<<<<<<< HEAD
 		return "user_vo [Breif_education=" + Breif_education + ", description=" + description + ", topskill=" + topskill
 				+ ", select2_Country=" + select2_Country + ", select2_StateZone=" + select2_StateZone
+=======
+		return "user_vo [Breif_education=" + Breif_education + ", description=" + description + ", topskill="
+				+ topskill + ", select2_Country=" + select2_Country + ", select2_StateZone=" + select2_StateZone
+>>>>>>> raasmain
 				+ ", select2_TimeZone=" + select2_TimeZone + ", idRate=" + idRate + ", select2_Hour=" + select2_Hour
 				+ ", checkboxes=" + checkboxes + "]";
 	}

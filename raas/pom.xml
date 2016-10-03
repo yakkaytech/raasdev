@@ -126,6 +126,7 @@
 		</dependency>
 
 
+<<<<<<< HEAD
 
 		<!-- Apache Commons file upload -->
 		<dependency>
@@ -177,5 +178,10 @@
 			</plugin>
 
 		</plugins>
+=======
+	</dependencies>
+	<build>
+		<finalName>raas</finalName>
+>>>>>>> raasmain
 	</build>
 </project>

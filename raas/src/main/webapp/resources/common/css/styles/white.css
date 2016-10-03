@@ -42,7 +42,11 @@ body > .header {
 /* Define 2 column template */
 .right-side, .left-side {
     min-height: 100%;
+<<<<<<< HEAD
     
+=======
+    display: block;
+>>>>>>> raasmain
 }
 
 /*right side - contins main content*/
@@ -54,13 +58,21 @@ body > .header {
 .left-side {
     position: absolute;
     width: 250px;
+<<<<<<< HEAD
     top: 0; 
+=======
+    top: 0;
+>>>>>>> raasmain
 }
 
 .left-side .sidebar-offcanvas a {
     padding: 0;
     margin: 0;
+<<<<<<< HEAD
     /*vertical-align: top; */
+=======
+    vertical-align: top;
+>>>>>>> raasmain
 }
 
 @media screen and (min-width: 992px) {
@@ -376,7 +388,10 @@ body > .header .logo .icon {
 */
 .sidebar {
     margin-bottom: 5px;
+<<<<<<< HEAD
    
+=======
+>>>>>>> raasmain
 }
 
 .sidebar .sidebar-form input:focus {
@@ -1314,7 +1329,11 @@ li.dropdown-footer {
 .sidebar {
     display: block;
     float: left;
+<<<<<<< HEAD
     /*width: 250px;*/
+=======
+    width: 250px;
+>>>>>>> raasmain
 }
 
 .content {

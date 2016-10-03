@@ -1,5 +1,6 @@
 package com.wrapper;
 
+<<<<<<< HEAD
 import java.util.Date;
 
 import org.springframework.web.multipart.MultipartFile;
@@ -9,6 +10,14 @@ public class wrapper {
 	private String checkbox;
 	private String name;
 	private String des;
+=======
+
+public class wrapper {
+
+	private String checkbox ;
+	private String name ;
+	private String des ;
+>>>>>>> raasmain
 	private String country_name;
 	private String state_name;
 	private int state_id;
@@ -18,6 +27,7 @@ public class wrapper {
 	private String iso_code_2;
 	private String project_type;
 	private int project_id;
+<<<<<<< HEAD
 	private String task_group_name;
 	private int task_group_id;
 	private String task_type_name;
@@ -121,75 +131,151 @@ public class wrapper {
 	public void setProject_desc(String project_desc) {
 		this.project_desc = project_desc;
 	}
+=======
+	
+
+	
+	
+
+>>>>>>> raasmain
 
 	public String getProject_type() {
 		return project_type;
 	}
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> raasmain
 	public void setProject_type(String project_type) {
 		this.project_type = project_type;
 	}
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> raasmain
 	public int getProject_id() {
 		return project_id;
 	}
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> raasmain
 	public void setProject_id(int project_id) {
 		this.project_id = project_id;
 	}
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> raasmain
 	public String getIso_code() {
 		return iso_code_2;
 	}
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> raasmain
 	public void setIso_code(String iso_code_2) {
 		this.iso_code_2 = iso_code_2;
 	}
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> raasmain
 	public int getCountry_id() {
 		return country_id;
 	}
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> raasmain
 	public void setCountry_id(int country_id) {
 		this.country_id = country_id;
 	}
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> raasmain
 	public int getTimezone_id() {
 		return timezone_id;
 	}
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> raasmain
 	public void setTimezone_id(int timezone_id) {
 		this.timezone_id = timezone_id;
 	}
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> raasmain
 	public String getTimezone_name() {
 		return timezone_name;
 	}
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> raasmain
 	public void setTimezone_name(String timezone_name) {
 		this.timezone_name = timezone_name;
 	}
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> raasmain
 	public String getState_name() {
 		return state_name;
 	}
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> raasmain
 	public void setState_name(String state_name) {
 		this.state_name = state_name;
 	}
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> raasmain
 	public int getState_id() {
 		return state_id;
 	}
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> raasmain
 	public void setState_id(int state_id) {
 		this.state_id = state_id;
 	}
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> raasmain
 	public String getCountry_name() {
 		return country_name;
 	}
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> raasmain
 	public void setCountry_name(String country_name) {
 		this.country_name = country_name;
 	}
@@ -198,26 +284,47 @@ public class wrapper {
 		return checkbox;
 	}
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> raasmain
 	public void setCheckbox(String checkbox) {
 		this.checkbox = checkbox;
 	}
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> raasmain
 	public String getName() {
 		return name;
 	}
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> raasmain
 	public void setName(String name) {
 		this.name = name;
 	}
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> raasmain
 	public String getDes() {
 		return des;
 	}
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> raasmain
 	public void setDes(String des) {
 		this.des = des;
 	}
 
+<<<<<<< HEAD
 	public wrapper() {
 
 	}
@@ -515,4 +622,11 @@ public class wrapper {
 	}
     
 	
+=======
+
+	public wrapper() {
+
+	}
+
+>>>>>>> raasmain
 }

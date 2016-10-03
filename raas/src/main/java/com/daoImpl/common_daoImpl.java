@@ -18,6 +18,7 @@ import com.wrapper.wrapper;
 @Component
 public class common_daoImpl implements common_dao {
 
+<<<<<<< HEAD
 	private Connection conn;
 
 	public List<wrapper> tabledata() throws Exception {
@@ -39,6 +40,35 @@ public class common_daoImpl implements common_dao {
 
 	public List<wrapper> dropdowndata() throws Exception {
 
+=======
+	
+	
+	private Connection conn;
+	public List<wrapper> tabledata() throws Exception {
+		// TODO Auto-generated method stub
+		
+			conn = connectionDB.getConnection();
+			Statement stmt = conn.createStatement();
+			List<wrapper> list = new ArrayList<wrapper>();
+			list.clear();
+			ResultSet rs = stmt.executeQuery("select * from role");
+			while (rs.next()) {
+				wrapper obj = new wrapper();
+				obj.setCheckbox(rs.getString("role_id"));
+				obj.setName(rs.getString("name"));
+				obj.setDes(rs.getString("description"));
+				list.add(obj);
+			}
+			return list;
+		}
+
+		
+	
+
+	public List<wrapper> dropdowndata() throws Exception {
+		// TODO Auto-generated method stub
+		
+>>>>>>> raasmain
 		conn = connectionDB.getConnection();
 		Statement stmt = conn.createStatement();
 		List<wrapper> list = new ArrayList<wrapper>();
@@ -52,9 +82,20 @@ public class common_daoImpl implements common_dao {
 		}
 		return list;
 	}
+<<<<<<< HEAD
 
 	public List<wrapper> timezonedata() throws Exception {
 
+=======
+		
+		
+		
+
+	public List<wrapper> timezonedata() throws Exception {
+		// TODO Auto-generated method stub
+		
+		
+>>>>>>> raasmain
 		conn = connectionDB.getConnection();
 		Statement stmt = conn.createStatement();
 		List<wrapper> list = new ArrayList<wrapper>();
@@ -70,7 +111,14 @@ public class common_daoImpl implements common_dao {
 	}
 
 	public List<wrapper> zonedata() throws Exception {
+<<<<<<< HEAD
 
+=======
+		// TODO Auto-generated method stub
+		
+		
+		
+>>>>>>> raasmain
 		conn = connectionDB.getConnection();
 		Statement stmt = conn.createStatement();
 		List<wrapper> list = new ArrayList<wrapper>();
@@ -85,6 +133,7 @@ public class common_daoImpl implements common_dao {
 		return list;
 	}
 
+<<<<<<< HEAD
 	// states
 	public String dropdownstate(user_vo obj) throws Exception {
 		conn = connectionDB.getConnection();
@@ -104,3 +153,28 @@ public class common_daoImpl implements common_dao {
 		return json;
 	}
 }
+=======
+	
+	// states
+		public String dropdownstate(user_vo obj) throws Exception {
+			// TODO Auto-generated method stub
+			conn = connectionDB.getConnection();
+			Statement stmt = conn.createStatement();
+			String json = "";
+			List<wrapper> list1 = new ArrayList<wrapper>();
+			list1.clear();
+			ResultSet rs1 = stmt.executeQuery("select * from zone where country_id='" + obj.getDropstate() + "'");
+			while (rs1.next()) {
+				wrapper obj1 = new wrapper();
+				obj1.setState_name(rs1.getString("zonename"));
+				obj1.setState_id(rs1.getInt("zone_id"));
+				list1.add(obj1);
+			}
+			Gson gson = new GsonBuilder().setPrettyPrinting().create();
+			json = gson.toJson(list1);
+			return json;
+		}
+	
+	
+}
+>>>>>>> raasmain

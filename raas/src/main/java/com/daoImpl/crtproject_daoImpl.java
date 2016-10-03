@@ -17,15 +17,25 @@ import com.dao.crtproject_dao;
 
 import com.utility.connectionDB;
 import com.vo.crtproject_vo;
+<<<<<<< HEAD
 import com.vo.projectRole_vo;
+=======
+>>>>>>> raasmain
 import com.wrapper.wrapper;
 
 @Component
 public class crtproject_daoImpl implements crtproject_dao {
 
 	private Connection conn;
+<<<<<<< HEAD
 
 	public void proregister(crtproject_vo crt, String userName) throws Exception {
+=======
+	public void proregister(crtproject_vo crt,String userName) throws Exception {
+		// TODO Auto-generated method stub
+		
+		
+>>>>>>> raasmain
 		conn = connectionDB.getConnection();
 		Statement stmt = conn.createStatement();
 		String sysdate;
@@ -34,6 +44,7 @@ public class crtproject_daoImpl implements crtproject_dao {
 		sysdate = dateFormat.format(date);
 		int skill_id = 0;
 
+<<<<<<< HEAD
 		String projectquery = "insert into project(projectname,description,projectcode,status,approved,token,date_added,date_begin,date_end,project_type_id,timezone_id)values('"
 				+ crt.getProject_name() + "','" + crt.getProject_desc() + "','1',1,0,'yes','" + sysdate + "','"
 				+ sysdate + "','" + sysdate + "',1,'" + crt.getTimezone() + "')";
@@ -64,23 +75,85 @@ public class crtproject_daoImpl implements crtproject_dao {
 				+ "')";
 		stmt.execute(projectuser);
 
+=======
+		
+		
+		// project data
+
+		String projectquery = "insert into project(projectname,description,projectcode,status,approved,token,date_added,date_begin,date_end,project_type_id,timezone_id)values('"
+					+ crt.getProject_name() + "','" + crt.getProject_desc() + "','1',1,0,'yes','"+sysdate+"','"+sysdate+"','"+sysdate+"',1,'" + crt.getTimezone()+ "')";
+			stmt.execute(projectquery);
+			
+			
+			
+		
+		
+		
+		// get project_id from project table
+		int project_id = 0;
+		ResultSet rs = stmt.executeQuery("select project_id from project");
+		while (rs.next()) {
+			project_id = rs.getInt("project_id");
+		}
+		
+		
+		
+		//get user details from user table 
+		int user_id=0;
+		String firstname="";
+		String lastname="";
+		ResultSet user = stmt.executeQuery("select * from user where username='"+userName+"'");
+		while (user.next()) {
+			user_id = user.getInt("user_id");
+			firstname=user.getString("firstname");
+			lastname=user.getString("lastname");
+		}
+		
+		
+
+		
+		
+		
+		     // team table
+				String team="insert into team (user_id,project_id,firstname,lastname"
+						+ ",email,resource_type,code,status,date_added,project_infrastructure_id,user_group_id) values ('"+user_id+"','" + project_id+"','" + firstname + "','" + lastname + "','"
+						+userName +"','null','101','0','" + sysdate + "',0,1)";
+				
+				stmt.execute(team);
+				
+		
+		
+>>>>>>> raasmain
 		// project role
 		List<Integer> projectrole = new ArrayList<Integer>();
 		Set<Integer> checkbox = new HashSet<Integer>();
 		projectrole.clear();
 		checkbox.clear();
+<<<<<<< HEAD
+=======
+		System.out.println(crt.getQuantity().size());
+	
+>>>>>>> raasmain
 		ResultSet user_r = stmt.executeQuery("select role_id from project_role where project_id='" + project_id + "'");
 		while (user_r.next()) {
 			projectrole.add(user_r.getInt("role_id"));
 		}
 		int x;
 		if (projectrole.isEmpty()) {
+<<<<<<< HEAD
 			for (x = 0; x < crt.getCheckboxes().size(); x++) {
 				for (int j = 0; j < crt.getQuantity().get(x); j++) {
 					String projectroleQuery = "insert into project_role(project_id,role_id,name,additional_desc,rate,rate_min,rate_max,frequency_code,hours_per_occurrence,ror_code,ror_occurrence_nbr,ror_end_date,date_added)values('"
 							+ project_id + "','" + crt.getCheckboxes().get(x)
 							+ "','"+ crt.getProject_name()+"','"+crt.getProject_desc()+"',1,1,1,1,1,1,1,'" + sysdate + "','" + sysdate + "')";
 					stmt.execute(projectroleQuery);
+=======
+			for ( x = 0; x < crt.getCheckboxes().size(); x++) {
+				for(int j=0;j<crt.getQuantity().get(x);j++){
+				String projectroleQuery = "insert into project_role(project_id,role_id,name,additional_desc,date_added)values('"+project_id+"','"
+						+ crt.getCheckboxes().get(x) + "','name','additional_desc','" + sysdate + "')";
+				stmt.execute(projectroleQuery);
+>>>>>>> raasmain
 				}
 			}
 		} else {
@@ -95,12 +168,23 @@ public class crtproject_daoImpl implements crtproject_dao {
 			}
 			Iterator<Integer> itr = checkbox.iterator();
 			while (itr.hasNext()) {
+<<<<<<< HEAD
 				String projectrole1 = "insert into project_role(project_id,role_id,name,additional_desc,date_added)values('"
 						+ project_id + "','" + itr.next() + "','name','additional_desc','" + sysdate + "')";
 				stmt.execute(projectrole1);
 			}
 
 		}
+=======
+				String projectrole1 = "insert into project_role(project_id,role_id,name,additional_desc,date_added)values('"+project_id+"','"
+						+ itr.next() + "','name','additional_desc','" + sysdate + "')";
+				stmt.execute(projectrole1);
+			}
+		}
+		
+				
+
+>>>>>>> raasmain
 		// skills
 		String TopSkillString = crt.getSkill();
 		String[] namesList = TopSkillString.split(",");
@@ -112,16 +196,30 @@ public class crtproject_daoImpl implements crtproject_dao {
 			if (skill_id < 1) {
 				skill_id = 999;
 			}
+<<<<<<< HEAD
 			String projectSkillSplit = "insert into project_skill(skill_id,skill_other_name,project_id)values('"
 					+ skill_id + "','" + skill + "','" + project_id + "')";
 			stmt.execute(projectSkillSplit);
 		}
 		// store country id and zone id to address table
 		int user_id2 = 0;
+=======
+			String projectSkillSplit = "insert into project_skill(skill_id,skill_other_name,project_id)values('" + skill_id
+					+ "','" + skill + "','" + project_id + "')";
+			stmt.execute(projectSkillSplit);
+		}
+		
+		
+		
+		// store country id and zone id to address table
+		int user_id2 = 0;
+
+>>>>>>> raasmain
 		ResultSet getuser = stmt.executeQuery("select user_id from address where user_id='" + user_id + "'");
 		while (getuser.next()) {
 			user_id2 = getuser.getInt("user_id");
 		}
+<<<<<<< HEAD
 
 		if (user_id2 == 0) {
 			String address = "insert into address(User_id,address_1,address_2,city,postcode,country_id,zone_id)values('"
@@ -136,6 +234,26 @@ public class crtproject_daoImpl implements crtproject_dao {
 	}
 
 	public List<wrapper> projecttype() throws Exception {
+=======
+			System.out.println(user_id2);	
+				if (user_id2 == 0) {
+					String address = "insert into address(User_id,address_1,address_2,city,postcode,country_id,zone_id)values('"
+							+ user_id + "','','','','','" + crt.getCountry() + "','" + crt.getZone()
+							+ "')";
+					stmt.execute(address);
+				} else {
+					String Useraddress = "update address set country_id= '" + crt.getCountry() + "',zone_id='"
+							+ crt.getZone() + "' where user_id = '" + user_id2+ "'";
+					stmt.execute(Useraddress);
+				}	
+		
+				
+				
+		System.out.println("Data Inserted successfully");
+	}
+	public List<wrapper> projecttype() throws Exception {
+		// TODO Auto-generated method stub
+>>>>>>> raasmain
 
 		conn = connectionDB.getConnection();
 		Statement stmt = conn.createStatement();
@@ -149,6 +267,7 @@ public class crtproject_daoImpl implements crtproject_dao {
 			list.add(obj1);
 		}
 		return list;
+<<<<<<< HEAD
 	}
 
 	public List<wrapper> prodetail(crtproject_vo crt, String userName, int project_id) throws Exception {
@@ -346,3 +465,15 @@ public class crtproject_daoImpl implements crtproject_dao {
 
 	
 }
+=======
+		
+		
+		
+		
+	}
+
+	
+
+	
+}
+>>>>>>> raasmain

@@ -9,12 +9,19 @@ body {
     color: #757b87;
 }
 .icon-section{
+<<<<<<< HEAD
     /*background-color: #09bd8f; */
     background-color: #0580e5; 
     line-height: 7px;
     padding-top: 10px;
     
     /*margin-bottom: 10px;*/
+=======
+    background-color: #09bd8f;
+    line-height: 7px;
+    padding-top: 10px;
+    margin-bottom: 10px;
+>>>>>>> raasmain
 
 }
 a:link,
@@ -185,6 +192,7 @@ p label {
     font-size: 14px;
     text-transform: uppercase;
     font-weight: 400;
+<<<<<<< HEAD
     color: #fff;
 }
 
@@ -201,6 +209,13 @@ p label {
 
 
 
+=======
+}
+
+.navbar-default .navbar-nav > li>a:hover {
+    color: #01bc8c;
+}
+>>>>>>> raasmain
 /* ---------- Navbar  Dropdown menu Css ---------- */
 
 .navbar-nav .dropdown-menu:before {
@@ -227,7 +242,11 @@ p label {
 .navbar-default .navbar-nav >.open >a:hover,
 .navbar-default .navbar-nav >.open >a {
     background-color: #fff !important;
+<<<<<<< HEAD
     color: #0580e5;
+=======
+    color: #01bc8c;
+>>>>>>> raasmain
 }
 
 .navbar-nav .dropdown-menu li:hover {
@@ -237,6 +256,7 @@ p label {
 .navbar {
     margin-bottom: 0px;
     background-color: transparent;
+<<<<<<< HEAD
     border:none;
 }
 /* ---------- Nav bar Css End ---------- */
@@ -279,6 +299,11 @@ p label {
 
 /* ---------- project bar Css End ---------- */
 
+=======
+    border: none;
+}
+/* ---------- Nav bar Css End ---------- */
+>>>>>>> raasmain
 /* ---------- Breadcrumb Css ---------- */
 
 .breadcrumb a,
@@ -467,11 +492,15 @@ blockquote {
 
 .feature-main {
     padding: 50px 0px;
+<<<<<<< HEAD
     background-color: #d0d8d6;
 }
 
 .feature-main2 {
     padding: 50px 0px;
+=======
+    background-color: #f2eded;
+>>>>>>> raasmain
 }
 
 .feature-main1 {
@@ -652,6 +681,7 @@ footer .btn-primary.text-white {
         width: 50%;
     }
 }
+<<<<<<< HEAD
 
 /* ---------- main slid Css - raj ---------- */
 
@@ -662,6 +692,8 @@ footer .btn-primary.text-white {
     height: auto;
 }
 
+=======
+>>>>>>> raasmain
 /* ---------- About Us Slider Css ---------- */
 
 #owl-demo .item img {
@@ -733,6 +765,7 @@ footer .btn-primary.text-white {
 /* ---------- Copy Right Section Css  ---------- */
 
 .copyright {
+<<<<<<< HEAD
     /*background-color: #1a1a1a;
 margin: 0.5% 0;
     */
@@ -740,6 +773,9 @@ margin: 0.5% 0;
      color: #fff;
     padding: 0.5% 0;
     
+=======
+    background-color: #1a1a1a;
+>>>>>>> raasmain
 }
 
 .copyright p {

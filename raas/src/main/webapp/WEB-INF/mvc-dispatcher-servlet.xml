@@ -24,8 +24,13 @@
 	<context:annotation-config />
 	<mvc:annotation-driven />
 	<mvc:resources location="/resources/" mapping="/resources/**"></mvc:resources>
+<<<<<<< HEAD
     <mvc:resources location="/resources/" mapping="/resources/**"></mvc:resources>
     
+=======
+    <mvc:resources location="/resources/" mapping="/crt/resources/**"></mvc:resources>
+
+>>>>>>> raasmain
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix">
@@ -34,12 +39,19 @@
 		<property name="suffix">
 			<value>.jsp</value>
 		</property>
+<<<<<<< HEAD
 	</bean>
 	
 	 <bean id="multipartResolver"
       class="org.springframework.web.multipart.commons.CommonsMultipartResolver"/>
       
 	 <bean name="user_daoImpl" class="com.daoImpl.user_daoImpl" />
+=======
+
+
+	</bean>
+	<bean name="user_daoImpl" class="com.daoImpl.user_daoImpl" />
+>>>>>>> raasmain
 	<bean name="common_daoImpl" class="com.daoImpl.common_daoImpl" />
 	<bean name="crtproject_daoImpl" class="com.daoImpl.crtproject_daoImpl" />
 </beans>
